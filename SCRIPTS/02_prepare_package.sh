@@ -2,7 +2,7 @@
 clear
 
 #blocktrron.git 
-patch -p1 < ../PATCH/new/main/exp/uboot-rockchip-update-to-v2020.10-rc5.patch
+patch -p1 < ../PATCH/new/main/exp/uboot-rockchip-update-to-v2020.10.patch
 patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-GMAC-clock-name.patch
 
 #update r8152 driver
@@ -289,7 +289,7 @@ cp -rf ../openwrt-lienol/package/network/fullconenat ./package/network/fullconen
 MY_Var=package/lean/lean-translate
 git clone -b master --single-branch https://github.com/QiuSimons/addition-trans-zh ${MY_Var}
 sed -i '/uci .* dhcp/d' ${MY_Var}/files/zzz-default-settings
-sed -i '/chinadnslist\|ddns\|upnp\|netease\|rng\|openclash\|dockerman/d' ${MY_Var}/files/zzz-default-settings
+sed -i '/chinadnslist\|ddns\|upnp\|netease\|argon\|rng\|openclash\|dockerman/d' ${MY_Var}/files/zzz-default-settings
 sed -i "4a uci set luci.main.lang='en'" ${MY_Var}/files/zzz-default-settings
 sed -i '5a uci commit luci' ${MY_Var}/files/zzz-default-settings
 sed -i '/^[[:space:]]*$/d' ${MY_Var}/files/zzz-default-settings
