@@ -1,6 +1,5 @@
 #!/bin/bash
-
-notExce(){
+#notExce(){ 
 git clone -b master https://git.openwrt.org/openwrt/staging/blocktrron.git openwrt
 cd openwrt
 git config --local user.email "action@github.com" && git config --local user.name "GitHub Action"
@@ -12,9 +11,8 @@ git rebase --skip
 git rebase --skip
 git rebase --skip
 cd ..
-}
-
-git clone -b master https://git.openwrt.org/openwrt/openwrt.git openwrt
+#}
+#git clone -b master https://git.openwrt.org/openwrt/openwrt.git openwrt
 git clone https://github.com/Lienol/openwrt.git openwrt-lienol
 #git clone -b linksys-ea6350v3-mastertrack https://github.com/NoTengoBattery/openwrt NoTengoBattery
 exit 0
